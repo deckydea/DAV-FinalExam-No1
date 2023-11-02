@@ -25,4 +25,8 @@ public class Member {
     public void belanja(int totalBelanja) {
 
     }
+
+    public String getDisplayName() {
+        return memberNumber + ". " + name + " - " + level + " - " + point + " point";
+    }
 }

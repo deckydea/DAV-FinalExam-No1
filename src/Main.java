@@ -14,8 +14,8 @@ public class Main {
 
         while (true) {
             System.out.println("Menu:");
-            System.out.println("1. Tambah member.Member");
-            System.out.println("2. Tampilkan Data member.Member");
+            System.out.println("1. Tambah Member");
+            System.out.println("2. Tampilkan Data Member");
             System.out.println("3. Record Belanja");
             System.out.println("4. Keluar");
 
@@ -31,13 +31,13 @@ public class Main {
 
                     Member newMember = createMember(memberName, memberLevel);
                     members.add(newMember);
-                    System.out.println("member.Member berhasil ditambahkan.");
+                    System.out.println("Member berhasil ditambahkan.");
                     break;
 
                 case 2:
-                    System.out.println("Daftar member.Member:");
+                    System.out.println("Daftar Member:");
                     for (Member member : members) {
-                        System.out.println(member);
+                        System.out.println(member.getDisplayName());
                     }
                     break;
 
@@ -77,7 +77,7 @@ public class Main {
             case "platinum":
                 return new PlatinumMember(name);
             default:
-                System.out.println("Level member tidak valid. member.Member baru akan menjadi Basic.");
+                System.out.println("Level member tidak valid. Member baru akan menjadi Basic.");
                 return new BasicMember(name);
         }
     }
